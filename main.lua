@@ -42,6 +42,9 @@ function GlobalHandler:Init(Name)
             error("Cannot use [as] statement witout import")
         end
 
+        if genv[Name] then
+            error (("%s is already designated as a package choose another name"):format(Name))
+        end
         genv[Name] = Cache.CurrentImport
     end
     
