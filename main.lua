@@ -4,15 +4,14 @@ local genv = getgenv()
 
 function GlobalHandler:Init(Name) 
     local self = genv[Name] or setmetatable({}, GlobalHandler)
-    self.Name = Name or "PerthENV"
+    Name = Name or "PerthENV" self.Name = Name
     self.ContentURL = "https://raw.githubusercontent.com/Perthys/PerthPackage/main/Packages/%s.lua"
     self.Cache = {}
     local Cache = self.Cache;
     
-    if getgenv then
-        if not getgenv()[Name] then
-            genv[Name] = self;
-        end
+    
+    if not genv[Name] then
+        genv[Name] = self;
     end
     
     local function import(Name)
