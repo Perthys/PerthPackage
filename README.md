@@ -5,7 +5,9 @@ and use es6 javascript import syntax aswell
 gonna have built in packages aswell as ones that you can import using get 
 
 ```lua
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Perthys/PerthPackage/blob/main/main.lua'))()
+local PerthPackage = loadstring(game:HttpGet('https://raw.githubusercontent.com/Perthys/PerthPackage/blob/main/main.lua'))()
+
+PerthPackage:Init("CacheStorageName")
 
 import "Maid" as ""
 
