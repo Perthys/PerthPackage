@@ -5,7 +5,7 @@ and use es6 javascript import syntax aswell
 gonna have built in packages aswell as ones that you can import using get 
 
 ```lua
-loadstring("PerthThing")()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Perthys/PerthPackage/blob/main/main.lua'))()
 
 import "Maid" as ""
 
