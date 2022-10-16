@@ -19,7 +19,7 @@ function GlobalHandler:Init(Name)
         assert(Name, ("Expected [string] got [nil]"))
         assert(type(Name) == "string", ("Expected [string] got [%s]"):format(type(Name)))
 
-        local Get, Result = pcall(game.HttpGet, game, self.ContentURL:format(Name));
+        local Get, Result = pcall(game.HttpGet, game, self.ContentURL:format(Name:lower()));
         
         if Get and Result and #Result ~= 0 then
             Cache.CurrentImport = loadstring(Result)();
